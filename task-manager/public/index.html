@@ -1,43 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Company Name</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/login" class="button">Sign Up/Log In</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Welcome to Our Task Management Application</h2>
+                <p>Efficiently manage tasks, track progress, and collaborate within your organization.</p>
+                <a href="/login" class="button">Get Started</a>
+            </div>
+        </section>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Our company is dedicated to providing top-notch task management solutions that streamline your workflow and enhance productivity.</p>
+        </section>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+        <section id="features">
+            <h2>Features</h2>
+            <div class="feature-list">
+                <div class="feature">
+                    <h3>Manage Departments</h3>
+                    <p>Create different departments and add employees to these groups.</p>
+                </div>
+                <div class="feature">
+                    <h3>Task Assignment</h3>
+                    <p>Assign tasks to employees and manage their progress.</p>
+                </div>
+                <div class="feature">
+                    <h3>Employee Management</h3>
+                    <p>Move employees between departments and remove them from the organization.</p>
+                </div>
+                <div class="feature">
+                    <h3>Persistent Data</h3>
+                    <p>All changes are saved and persist after page refreshes.</p>
+                </div>
+                <div class="feature">
+                    <h3>Email Notifications</h3>
+                    <p>Receive email notifications for task due dates.</p>
+                </div>
+                <div class="feature">
+                    <h3>Summary Dashboard</h3>
+                    <p>View overall task completion rates, departmental performance, and pending tasks.</p>
+                </div>
+                <div class="feature">
+                    <h3>Recurring Tasks</h3>
+                    <p>Schedule and manage recurring tasks effortlessly.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>For more information or support, please contact us at support@company.com.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Company Name. All rights reserved.</p>
+    </footer>
+</body>
 </html>
+
