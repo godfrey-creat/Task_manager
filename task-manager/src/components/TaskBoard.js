@@ -1,5 +1,6 @@
 import React, { useEffect, useSatate } from 'react';
 import axios from 'axios';
+import TaskList from './TaskList';
 
 const TaskBoard = () => {
 	const [tasks, setTasks] = useState([]);
@@ -8,7 +9,7 @@ const TaskBoard = () => {
 		const fetchTasks = async () => {
 			const token = localstorage.getItem('token');
 			try {
-				const response = await axios.get('http:))localhost:8000/api/tasks/', {
+				const response = await axios.get('http://localhost:8000/api/tasks/', {
 					headers: { Authorization: `Bearer ${token}` },
 				});
 				setTasks(response.data);
@@ -23,17 +24,10 @@ const TaskBoard = () => {
 	return (
 		<div>
 			<h2>Task Board</h2>
-			<ul>
-				{tasks.map((task) => (
-					<li key={task.id}>
-						<h4>{task.title}</h4>
-						<p>{task.description}</p>
-						<p>{task.due_date}</p>
-					</li>
-				))}
-			</ul>
+			<TaskList tasks={tasks} />
 		</div>
 	);
 };
+
 
 export default TaskBoard;

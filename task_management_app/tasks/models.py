@@ -1,9 +1,17 @@
 from django.db import models
-from django.contrib.auth import get_user_model
-from departments.models import Department
+from django.contrib.auth.models import AbstractUser
+#from django.contrib.auth import get_user_model
+#from departments.models import Department
 
 # Create your models here.
-User = get_user_model()
+#User = get_user_model()
+
+class User(AbstractUser):
+    is_managef = models.BooleanField(default=False)
+
+class Department(models.Model):
+    name = models.CharField(max_length=100)
+    manager = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name="managed_department")
 
 class Task(models.Model):
     title = models.CharField(max_length=100)
