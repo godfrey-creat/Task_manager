@@ -10,7 +10,7 @@
     <header>
         <nav>
             <div class="logo">
-                <h1>Company Name</h1>
+                <h1>Task Management App</h1>
             </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -78,6 +78,21 @@
     <footer>
         <p>&copy; 2024 Company Name. All rights reserved.</p>
     </footer>
+    <script>
+	    //all links that need react router handling
+	    document.addEventListener('DOMContentLoaded', () => {
+		    const buttons = document.querySelectorAll('.button');
+		    buttons.forEach(button => {
+			    button.addEventListener('click', (event) => {
+				    event.preventDefault();
+				    const url = new URL(event.target.href);
+				    if (url.pathname === '/login') {
+					    window.location.href = '/login';
+				    }
+			    });
+		    });
+	    });
+    </script>
 </body>
 </html>
 
